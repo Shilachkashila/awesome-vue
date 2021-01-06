@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <router-wiev/>
-  </div>
-  <div class="">
-    <p>hhhhh</p>
+    <!-- <router-view/> -->
   </div>
 </template>
 
