@@ -4,14 +4,7 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'app',
-    components: {
-
-    }
-  }
-</script>
+<!--<script>export default {name: "app",components: {}}</script>-->
 
 <style lang="scss">
 
