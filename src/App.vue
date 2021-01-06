@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-
+    <router-wiev/>
+  </div>
+  <div class="">
+    <p>hhhhh</p>
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'app',
-    components: {
-
-    }
-  }
-</script>
 
 <style lang="scss">
 
