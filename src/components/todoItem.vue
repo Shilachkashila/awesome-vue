@@ -4,12 +4,12 @@
 
 <script>
 export default {
-  props: {
-    todo: {
-      type: object,
-      required: true
-    }
-  }
+//   props: {
+//     todo: {
+//     type: object,
+//     required: true
+//   }
+// }
 };
 </script>
 

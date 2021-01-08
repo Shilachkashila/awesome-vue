@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <p>fgh</p>
-    <todoList
+    <title-grey/>
+    <!-- компонент используется как пользовательский тег с тем же названием. Здесь <todoList/>  -->
+    <todo-list
     v-bind:todos= "todos"
     />
   </div>
@@ -9,7 +10,9 @@
 
 <!--<script>export default {name: "app",components: {}}</script>-->
 <script>
-  import todoList from '@/components/todoList';
+  import todoList from '@/components/todoList';//импорт компонента на эту страницу
+  //по пути указаному после from "@" - это папка src
+  import titleGrey from '@/components/titleGrey';
   export default {
     name: 'app',
     data() {
@@ -21,8 +24,10 @@
       ]
     };
     },
+    //регистрируем компонент в поле компонентс указывая имя: ключ
     components: {
-      todoList
+      todoList,//здесь имя:ключ todoList:todoList сократили потому, что они одинаковые
+      titleGrey
     }
   };
 </script>
