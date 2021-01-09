@@ -5,6 +5,7 @@
     <todo-list
     v-bind:todos= "todos"
     />
+    <title-grey/>
   </div>
 </template>
 
@@ -14,16 +15,20 @@
   //по пути указаному после from "@" - это папка src
   import titleGrey from '@/components/titleGrey';
   export default {
-    name: 'app',
-    data() {
-      return {
-      todos: [
-        { id: 1, title: 'купить хлеб', completed: false },
-        { id: 2, title: 'купить молоко', completed: false },
-        { id: 3, title: 'выбросить мусор', completed: false },
-      ]
-    };
-    },
+  name: 'app',
+  data() {
+    return {
+    todos: [
+      { id: 1, title: 'купить хлеб', completed: false },
+      { id: 2, title: 'купить молоко', completed: false },
+      { id: 3, title: 'выбросить мусор', completed: false },
+    ],
+    titlesGr: [
+      { id: 1, title: 'сделать сегодня', completed: false },
+      { id: 2, title: 'доделать завтра', completed: false },
+    ]
+  };
+  },
     //регистрируем компонент в поле компонентс указывая имя: ключ
     components: {
       todoList,//здесь имя:ключ todoList:todoList сократили потому, что они одинаковые
@@ -34,7 +39,7 @@
 
 <style>
 #app {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   font-family: sans-serif;
   text-align: center;

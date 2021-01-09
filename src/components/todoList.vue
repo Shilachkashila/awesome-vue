@@ -3,6 +3,7 @@
     <ul>
       <todoItem
       v-for="todo in todos" :key="todo.title"
+      :todo="todo"
       />
     </ul>
   </div>
