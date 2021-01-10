@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <title-grey/>
+    <title-grey
+    :titlesGr="titlesGr"
+    />
     <!-- компонент используется как пользовательский тег с тем же названием. Здесь <todoList/>  -->
     <todo-list
     v-bind:todos= "todos"
@@ -19,14 +21,14 @@
   data() {
     return {
     todos: [
-      { id: 1, title: 'купить хлеб', completed: false },
-      { id: 2, title: 'купить молоко', completed: false },
-      { id: 3, title: 'выбросить мусор', completed: false },
+      { id: 1, title: 'купить хлеб', completed: false, },
+      { id: 2, title: 'купить молоко', completed: false, },
+      { id: 3, title: 'выбросить мусор', completed: false, },
     ],
     titlesGr: [
-      { id: 1, title: 'сделать сегодня', completed: false },
-      { id: 2, title: 'доделать завтра', completed: false },
-    ]
+      { id: 1, title: 'сделать сегодня', },
+      { id: 2, title: 'доделать завтра', },
+    ],
   };
   },
     //регистрируем компонент в поле компонентс указывая имя: ключ

@@ -1,9 +1,9 @@
 <template>
-    <h2 class="title__grey">НАШИ УСЛУГИ :</h2>
+    <h2 class="title__grey">{{titlesGr}} :</h2>
 </template>
 <script>
 export default {
-  name: "",
+  props: ['titlesGr'],
   data: () => ({
 
   })
