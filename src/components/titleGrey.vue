@@ -1,9 +1,9 @@
 <template>
-    <h2 class="title__grey">{{titlesGr}} :</h2>
+    <h2 class="title__grey">{{titleG}} :</h2>
 </template>
 <script>
 export default {
-  props: ['titlesGr'],
+  props: ['titleG'],
   data: () => ({
 
   })

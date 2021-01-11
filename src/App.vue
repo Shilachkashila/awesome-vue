@@ -1,13 +1,15 @@
 <template>
   <div id="app">
     <title-grey
-    :titlesGr="titlesGr"
+    :titleG="titlesGr1"
     />
     <!-- компонент используется как пользовательский тег с тем же названием. Здесь <todoList/>  -->
     <todo-list
     v-bind:todos= "todos"
     />
-    <title-grey/>
+    <title-grey
+    :titleG="titlesGr2"
+    />
   </div>
 </template>
 
@@ -19,16 +21,15 @@
   export default {
   name: 'app',
   data() {
+    //
     return {
     todos: [
       { id: 1, title: 'купить хлеб', completed: false, },
       { id: 2, title: 'купить молоко', completed: false, },
       { id: 3, title: 'выбросить мусор', completed: false, },
     ],
-    titlesGr: [
-      { id: 1, title: 'сделать сегодня', },
-      { id: 2, title: 'доделать завтра', },
-    ],
+      titlesGr1: 'сделать сегодня',
+      titlesGr2: 'доделать завтра',
   };
   },
     //регистрируем компонент в поле компонентс указывая имя: ключ
