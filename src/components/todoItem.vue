@@ -1,11 +1,13 @@
 <template lang="html">
       <li>
         <span :class="{done: todo.completed}">
-          <input type="checkbox" v-on:change="todo.completed=!todo.completed">
+          <input type="checkbox" v-on:change="todo.completed =! todo.completed">
           <strong>{{todo.id}}</strong>
           {{todo.title}}
         </span>
-        <button type="button" name="button">&times;</button>
+        <button type="button" name="button"
+        v-on:click="$emit('remov-todo', todo.id)"
+        >&times;</button>
       </li>
 </template>
 

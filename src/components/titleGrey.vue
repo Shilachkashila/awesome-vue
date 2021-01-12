@@ -16,5 +16,6 @@ export default {
     font-size: 34px;
     line-height: 34px;
     color: #C4C4C4;
+    text-transform:uppercase;
 }
 </style>

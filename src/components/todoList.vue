@@ -4,6 +4,7 @@
       <todoItem
       v-for="todo in todos" :key="todo.title"
       :todo="todo"
+      v-on:remov-todo="removTodo"
       />
     </ul>
   </div>
@@ -12,9 +13,16 @@
 <script>
 import todoItem from '@/components/todoItem';
 export default {
-  props: ['todos'],
+  props: ['todos'],//данные от родителя к потомкам - с помощью пропс и директивы v-bind
   components: {
     todoItem
+  },
+  //данные от потомка к родителю v-on  и методс но это не точно :)
+  methods: {
+    removTodo(id) {
+      this.$emit( 'remov-todo', id )
+      //console.log(id)
+    }
   }
 };
 </script>

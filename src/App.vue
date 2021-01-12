@@ -6,6 +6,7 @@
     <!-- компонент используется как пользовательский тег с тем же названием. Здесь <todoList/>  -->
     <todo-list
     v-bind:todos= "todos"
+    v-on:remov-todo= "removTodo"
     />
     <title-grey
     :titleG="titlesGr2"
@@ -36,6 +37,11 @@
     components: {
       todoList,//здесь имя:ключ todoList:todoList сократили потому, что они одинаковые
       titleGrey
+    },
+    methods: {
+    removTodo(id) {
+        this.todos = this.todos.filter( t => t.id !== id )
+      }
     }
   };
 </script>
